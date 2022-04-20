@@ -7,14 +7,7 @@
 </template>
 <script>
 export default {
-    methods: {
-        myData() {
-            console.log(this.$route)
-        }
-    },
-    mounted() {
-        this.myData();
-    }
+
 }
 </script>
 <style>

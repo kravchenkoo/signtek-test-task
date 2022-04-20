@@ -82,10 +82,10 @@ export default {
             } else if (!this.validEmail(this.formData.email)) {
                 this.errors.email = 'Enter valid email adress.';
             }
-            if (this.errors.name.length && this.errors.lastName.length && this.errors.email.length) {
+            if (!this.errors.name.length && !this.errors.lastName.length && !this.errors.email.length) {
+                this.toSuccess();
                 return true;
             }
-            this.toSuccess();
         },
         validEmail(email) {
             var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
